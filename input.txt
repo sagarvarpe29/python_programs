@@ -1,0 +1,10 @@
+ASAP = As soon as possible
+FIFO = First in first out
+LIFO = Last in first out
+JSON = JavaScript object notation
+TDD = Test Driven Development
+SaaS = Software as a Service
+PaaS = Platform as a Service
+IaaS = Infrastructure as a ServiceML=Machine Learning
+AI=Artificial Intelligence
+ML = Machine Learning
