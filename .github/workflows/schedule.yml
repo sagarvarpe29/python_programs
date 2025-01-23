@@ -1,0 +1,24 @@
+name: Daily Python Script Runner
+
+on:
+  schedule:
+    - cron: '0 10 * * *' # Runs at 10:00 AM UTC daily
+
+jobs:
+  run-scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.x'
+
+      - name: Run Python scripts
+        run:
+          AgeCalculator.py
+          TaxCalculator.py
+          
+        
