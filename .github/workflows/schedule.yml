@@ -1,8 +1,9 @@
 name: Daily Python Script Runner
 
 on:
+  workflow_dispatch:  # This allows you to trigger the workflow manually
   schedule:
-    - cron: '0 10 * * *' # Runs at 10:00 AM UTC daily
+    - cron: '0 10 * * *' # Scheduled to run at 10:00 AM UTC daily
 
 jobs:
   run-scripts:
@@ -17,8 +18,6 @@ jobs:
           python-version: '3.x'
 
       - name: Run Python scripts
-        run:
-          AgeCalculator.py
-          TaxCalculator.py
-          
-        
+        run: |
+          python AgeCalculator.py
+          python TaxCalculator.py
